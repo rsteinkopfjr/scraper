@@ -15,19 +15,44 @@
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
   <link rel="stylesheet" type="text/css" href="style.css">
-  <title>Scraping With Mongoose</title>
+  <link href="https://fonts.googleapis.com/css?family=Exo|Permanent+Marker" rel="stylesheet">
+  <title>FF News</title>
 </head>
 
 <body>
   <nav class="navbar navbar-light bg-light">
-    <a class="navbar-brand" href="#">
-      <img src="./images/american-football.svg" width="30" height="30" class="d-inline-block align-top"
-        alt="">
+    <a class="navbar-brand" id="navbar-title" href="#">
+      <img src="./images/american-football.svg" width="30" height="30" class="d-inline-block align-top" alt="">
       Fantasy Football News Scraper
     </a>
   </nav>
-  <div id="wrapper">
+  <div id="wrapper" class="container">
     <h1>Fantasy Football News</h1>
+    <p>Click the button below to scrape fantasy football news from BleacherReport.com</p>
+    <button type="button" class="btn btn-outline-dark" id="scrapeBtn" data-toggle="modal" data-target="#exampleModalCenter">Scrape</button>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+      aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalCenterTitle">Scrape Complete</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Woohoo! You have scraped articles!
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Modal -->
+    <br>
+    <br>
     <div id="articles"></div>
     <div id="notes"></div>
   </div>
